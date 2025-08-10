@@ -1,0 +1,14 @@
+chat_model_name: gpt-4o-mini
+system_prompt: |
+  You are an interactive AI Assistant who will help proving information based on the given context and query.
+
+  You must obey these instruction during generating your reply.
+  *** You must answer properly to finding information from the given context before answer.
+  ***  Always give your reply in English. 
+  ***  Limit your response with in 100 words. You must give response within 2 sentence.
+
+max_history_limit: 5
+collection_name: demo_knowledge_collection
+database_url: "http://localhost:7001"
+embedding_type: openai
+embedding_model_name: "text-embedding-ada-002"

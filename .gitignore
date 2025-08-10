@@ -1,0 +1,11 @@
+.vscode/
+venv/
+__pycache__/
+dump/
+Data/
+logs/
+caches/
+*.service
+*.log
+collections/
+.env
