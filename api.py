@@ -24,7 +24,6 @@ try:
     database = VectorDatabase(configuration_filepath="./config.yml") #.database
     if database is None:
         print("Warning: Vector database is None. Please ensure the collection exists.")
-
     chatbot = BOT_FRAMEWORK(configuration_filepath='./config.yml',
                             vector_database=database)
 except Exception as e:

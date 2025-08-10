@@ -10,12 +10,14 @@ A flexible AI assistant framework built with langchain and Qdrant. It has multip
 - **Vector Database**: Qdrant integration for efficient similarity search
 - **Flexible Data Processing**: Support for PDF, DOCX, CSV, and text files
 - **RESTful API**: FastAPI-powered endpoints with CORS support
+- **Web Interface**: Interactive Streamlit chat UI
 - **Configurable**: YAML-based configuration system
 
 ## Project Structure
 
 ```
 ├── api.py                 # FastAPI application
+├── app.py                 # Streamlit web interface
 ├── config.yml             # Configuration file
 ├── utils/
 │   ├── database_utils.py  # Vector database operations
@@ -83,6 +85,14 @@ python api.py
 
 The API will be available at `http://localhost:8003`
 
+8. (Optional) Run the Streamlit web interface:
+
+```bash
+streamlit run app.py
+```
+
+The web interface will be available at `http://localhost:8501`
+
 ## Configuration
 
 Edit `config.yml` to customize:
@@ -91,6 +101,19 @@ Edit `config.yml` to customize:
 - **Embeddings**: Choose from OpenAI, Azure, or Gemini
 - **Database**: Qdrant connection settings
 - **System Prompt**: Customize AI behavior
+
+## Web Interface
+
+The Streamlit web interface provides an intuitive chat experience with:
+
+- **Two-sided Chat Layout**: User messages on the right, assistant responses on the left
+- **Real-time Processing**: Live status updates and typing indicators
+- **Language Selection**: Multi-language support via sidebar
+- **Chat History**: Persistent conversation during session
+- **Clear Chat**: Reset conversation with one click
+- **Responsive Design**: Works on desktop and mobile devices
+
+Access the web interface at `http://localhost:8501` after running the Streamlit app.
 
 ## API Endpoints
 
